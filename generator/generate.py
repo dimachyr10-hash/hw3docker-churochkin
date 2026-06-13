@@ -6,15 +6,27 @@ import sys
 NUM_ROWS = 50
 
 
-COLUMNS = ["COLUMN_1", "COLUMN_2", "COLUMN_3", "COLUMN_4"]
+COLUMNS = ["PLAYER_NAME", "AGE", "POSITION", "GOALS+ASSIST"]
 
 def generate_row():
 
     return {
-        "COLUMN_1": random.randint(0, 100),
-        "COLUMN_2": round(random.uniform(1.5, 9.9), 2),
-        "COLUMN_3": random.randint(0, 100),
-        "COLUMN_4": random.choice(["A", "B", "C"]),
+        "PLAYER_NAME": random.choice([
+            "Lamine Yamal",
+            "Lionel Messi",
+            "Matvey Safonv",
+            "Pedri",
+            "Mpappe",
+            "Harry Kane",
+            "Erling Haaland",
+            "Alexander Golovin",
+            "Vitinha",
+            "Declan Rice"
+            "Virgil Van dijk",
+        ]),
+        "AGE": random.randint(18, 38),
+        "POSITION": random.choice(["Goalkeeper", "Defender", "Midfielder", "Forward"]),
+        "GOALS+ASSIST": random.randint(0, 70),
     }
 
 OUTPUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "/data"
