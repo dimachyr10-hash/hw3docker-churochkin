@@ -6,7 +6,7 @@ import sys
 NUM_ROWS = 50
 
 
-COLUMNS = ["PLAYER_NAME", "AGE", "POSITION", "GOALS+ASSIST"]
+COLUMNS = ["PLAYER_NAME", "AGE", "POSITION", "GOALSandASSIST"]
 
 def generate_row():
 
@@ -21,12 +21,12 @@ def generate_row():
             "Erling Haaland",
             "Alexander Golovin",
             "Vitinha",
-            "Declan Rice"
+            "Declan Rice",
             "Virgil Van dijk",
         ]),
         "AGE": random.randint(18, 38),
         "POSITION": random.choice(["Goalkeeper", "Defender", "Midfielder", "Forward"]),
-        "GOALS+ASSIST": random.randint(0, 70),
+        "GOALSandASSIST": random.randint(0, 70),
     }
 
 OUTPUT_DIR = sys.argv[1] if len(sys.argv) > 1 else "/data"
