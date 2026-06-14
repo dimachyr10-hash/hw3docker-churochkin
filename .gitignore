@@ -2,3 +2,4 @@
 node_modules/
 data/*.csv
 local_data/*.csv
+data/*.html
